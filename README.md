@@ -6,14 +6,18 @@
 
 ## Production deploy
 Добавить в Github HOST, USERNAME и PASSWORD для CI/CD
-SSL:
-https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71
-Прописать следующие команды:
-sudo chown -R 777:777 ./logs
-sudo chown -R 777:777 ./tname/media
 
-Т. к. это mounted папки, в которые хотят писать приложения внутри докера.
-Но они работают не от root, а от пользователя 777:777.
+SSL:
+
+https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71
+
+Прописать следующие команды:
+
+`sudo chown -R 777:777 ./logs`
+
+`sudo chown -R 777:777 ./tname/media`
+
+Т. к. это mounted папки, в которые хотят писать приложения внутри докера. Но они работают не от root, а от пользователя 777:777.
 
 ## ТЕСТИРОВАНИЕ
 
