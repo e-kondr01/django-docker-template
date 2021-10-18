@@ -1,5 +1,6 @@
 # Django docker project template
 Перед началом работы поменять "tname" везде на имя проекта.
+Перед деплоем, "pdomain" на домен.
 
 ## Local deploy
 ./local.sh
@@ -14,7 +15,7 @@ https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-m
 
 Прописать следующие команды:
 
-`sudo chown -R 777:777 ./logs`
+`sudo chown -R 777:777 ./logs/gunicorn`
 
 `sudo chown -R 777:777 ./tname/media`
 
