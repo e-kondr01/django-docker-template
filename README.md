@@ -5,7 +5,8 @@
 ./local.sh
 
 ## Production deploy
-Добавить в Github HOST, USERNAME и PASSWORD для CI/CD
+./deploy.sh
+Добавить в Github HOST, USERNAME и PASSWORD для CI/CD.
 
 SSL:
 
@@ -23,7 +24,7 @@ https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-m
 
 docker exec django bash -c "python manage.py test --settings config.settings.test --parallel --keepdb"
 
-coverage: 
+Test coverage: 
 
 docker exec django bash -c "coverage run manage.py test --settings config.settings.test --keepdb && coverage html"
 
