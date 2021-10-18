@@ -71,6 +71,7 @@ venv/
 ENV/
 .envs/*
 !.envs/.local/
+!.envs/.production.example
 
 # Rope project settings
 .ropeproject
