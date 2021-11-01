@@ -1,10 +1,13 @@
 argon2-cffi
 whitenoise
 psycopg2-binary
+celery
+flower 
 
 # Django
 # ------------------------------------------------------------------------------
 django
+django-celery-email
 django-environ
 django-jazzmin
 # Django REST Framework
