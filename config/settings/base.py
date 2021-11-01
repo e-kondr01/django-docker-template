@@ -77,6 +77,7 @@ THIRD_PARTY_APPS = [
     "rest_framework",
     "corsheaders",
     "djoser",
+    "drf_spectacular"
 ]
 
 LOCAL_APPS = [
@@ -257,6 +258,12 @@ REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': (
         'django_filters.rest_framework.DjangoFilterBackend',
     ),
+    'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+}
+
+SPECTACULAR_SETTINGS = {
+    'TITLE': 'tname',
+    'DESCRIPTION': 'tname'
 }
 
 SIMPLE_JWT = {

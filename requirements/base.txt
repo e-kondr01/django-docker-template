@@ -13,3 +13,4 @@ django-cors-headers
 djangorestframework-simplejwt
 djoser
 django-filter
+drf-spectacular
