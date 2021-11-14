@@ -21,7 +21,19 @@ https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-m
 
 Т. к. это mounted папки, в которые хотят писать приложения внутри докера. Но они работают не от root, а от пользователя 777:777.
 
-## ТЕСТИРОВАНИЕ
+## Линтеры
+
+Встроены в vscode, с помощью файла .vscode/settings.
+
+Через коммандную строку:
+
+`pylint tname`
+
+`isort tname`
+
+`pycodestyle tname`
+
+## Тестирование
 
 docker exec django bash -c "python manage.py test --settings config.settings.test --parallel --keepdb"
 
