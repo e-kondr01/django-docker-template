@@ -8,7 +8,12 @@ import environ
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # tname/
 APPS_DIR = ROOT_DIR / "tname"
+
+# django-environ
 env = environ.Env()
+if env.str("DJANGO_SETTINGS_MODULE", "config.settings.local") != "config.settings.production":
+    # Необходимо для работы pylint в IDE
+    env.read_env(str(ROOT_DIR / ".envs" / ".local" / ".django"))
 
 # GENERAL
 # ------------------------------------------------------------------------------
@@ -79,9 +84,7 @@ THIRD_PARTY_APPS = [
     "drf_spectacular"
 ]
 
-LOCAL_APPS = [
-
-]
+LOCAL_APPS = []
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 

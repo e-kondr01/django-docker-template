@@ -277,8 +277,5 @@ tname/media/
 
 .ipython/
 
-# vscode
-.vscode/
-
 # Certbot
 certbot/
