@@ -6,6 +6,7 @@ on:
 
 jobs:
   linters_and_tests:
+    name: run linters and tests
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
@@ -30,6 +31,7 @@ jobs:
   deploy-production:
     needs: [linters_and_tests]
     runs-on: ubuntu-latest
+    name: deploy on prod
     steps:
       - name: deploy production with ssh
         uses: appleboy/ssh-action@master
