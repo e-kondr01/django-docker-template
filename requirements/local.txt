@@ -7,4 +7,3 @@ coverage
 tblib
 isort
 pylint-django
-pylint-celery
