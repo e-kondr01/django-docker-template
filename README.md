@@ -1,5 +1,8 @@
 # Django docker project template
+Шаблон для production-ready django приложения с докеризацией.
+
 Перед началом работы поменять "tname" везде на имя проекта.
+
 Перед деплоем, "pdomain" на домен.
 
 ## Local deploy
@@ -36,13 +39,17 @@ https://pentacent.medium.com/nginx-and-lets-encrypt-with-docker-in-less-than-5-m
 
 ## Тестирование
 
-`docker exec django bash -c "python manage.py test --settings config.settings.test --parallel --keepdb"`
+`docker exec django python manage.py test --settings config.settings.test --parallel --keepdb`
 
 Test coverage: 
 
 `docker exec django bash -c "coverage run manage.py test --settings config.settings.test --keepdb && coverage html"`
 
 смотрим htmlcov/index.html
+
+## Миграции
+
+`docker exec django python manage.py makemigrations`
 
 
 ## Postgres DB Backup:
