@@ -48,3 +48,9 @@ Test coverage:
 ## Postgres DB Backup:
 https://cookiecutter-django.readthedocs.io/en/latest/docker-postgres-backups.html
 
+## Gunicorn
+Поменять количество worker'ов и thread'ов исходя из числа ядер машины: 
+
+https://docs.gunicorn.org/en/stable/settings.html#worker-processes
+
+https://docs.gunicorn.org/en/stable/settings.html#threads
