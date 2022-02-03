@@ -1,6 +1,6 @@
 # Django docker project template
 Шаблон для production-ready django приложения с докеризацией. Основан на cookicutter django, 
-но переделан под Djagno Rest Framework.
+но переделан под Django Rest Framework.
 
 Перед началом работы поменять "tname" везде на имя проекта.
 
